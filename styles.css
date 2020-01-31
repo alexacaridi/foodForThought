@@ -1,0 +1,166 @@
+/* Team Project 1
+    Author: Alexa Caridi
+    Date: 1/27/2020
+    Filename: styles.css */
+
+/*external stylesheet*/
+
+body {
+	background-color: #3F3D3F;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+  
+header .container {
+    position: relative;
+    z-index: 2;
+}
+  
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+  
+@media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+}
+
+header h1.display-3 {
+    font-family: 'Fugaz One', cursive;
+    font-size: 68px;
+	color: white;
+	text-shadow: 8px 8px 10px #3F3D3F;
+	transition: text-shadow 1s;
+}
+
+header h1.display-3:hover{
+	text-shadow: #92BDE8 5px 5px 5px;
+}
+
+header p {
+	font-family: 'Petit Formal Script', cursive;
+	font-weight: bold;
+	color: whitesmoke;
+	margin-bottom: 90px;
+}
+
+a.btn {
+	font-size: 24px;
+	font-family: 'Tajawal', sans-serif;
+	color: white;
+	background-color: #3F3D3F;
+	border-radius: 32px;
+    padding: 10px;
+}
+
+a.btn:hover{
+	color: white;
+	text-shadow: 2px 2px 2px gray;
+	font-weight: bold;
+}
+
+.container {
+    max-width:968px;
+    color: white;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+.container img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Footer styles*/
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+
+footer div.container {
+    padding-top: 18px;
+}
+h5{
+    text-align: left;
+    font-family: 'Fugaz One', cursive;
+}
+
+p#footerText, p.rights {
+    text-align: left;
+    font-size: small;
+}
+.contact-list {
+    text-align: left;
+    font-size: small;
+}
+.nav-list li {
+    padding-top: 3px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: small;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -27px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-list li a:hover {
+    text-decoration: none;
+    font-size: 125%;
+    text-align: left;
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}

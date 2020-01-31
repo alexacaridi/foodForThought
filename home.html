@@ -1,0 +1,147 @@
+<!-- Team Project 1
+	Author: Alexa Caridi
+	Date: 1/27/2020
+	Filename: home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Food For Thought</title>
+    <!--Bootstrap CSS link-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!--Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Assistant|Fugaz+One|Petit+Formal+Script|Rosario|Tajawal&display=swap" rel="stylesheet">
+	<!--Local stylesheet-->
+    <link href="styles.css" rel="stylesheet" />
+    <!--Bootstrap Script links-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--embedded style rules-->
+    <style>
+        @media (max-width: 640px) {
+            header {
+                background-image: url("images/mealPrepHead.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 15px;
+        }
+        video { display: none; }
+        }
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="home.html" style="font-family: 'Fugaz One', cursive;">Food For Thought</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="menu.html">Menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="testimonials.html">Testimonials</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="survey.html">Survey</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact Us</a>
+				</li>
+            </ul>
+		</div>
+	</nav>
+
+	<header>
+		<div class="overlay"></div>
+		<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="images/mealPrep_loop.mp4" type="video/mp4">
+		</video>
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100 text-white">
+					<h1 class="display-3">Food For Thought</h1>
+					<p class="lead mb-0">Grab-&-Go Organic Eatery<br></p>
+				 <a class="btn" href="menu.html">Menu</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div><br></div>
+	<!--SECTION-->
+	<div class="section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4">
+					<h1>Browse Our Menu</h1>
+					<p>Our menu offers a delicious variety of well-balanced meals crafted with organic, non-GMO ingredients. Choose one of our favorites or custom make your own!</p>
+					<img class="image" src="images/menuPic.png" alt="Menu" />
+				</div>
+				
+				<div class="col-md-4">
+					<h1>We'll Prepare</h1>
+					<p>Leave it to our chefs to prepare your food fresh to order with delicious, wholesome ingredients suited to your dietary goals or restrictions.</p>
+					<img class="image" src="images/cookingPot.png" alt="Cooking pot" />
+				</div>
+				
+				<div class="col-md-4">
+					<h1>Bon Appetit</h1>
+					<p>Enjoy your on-the-go meal wherever your day may take you. With great taste and convenience like this, we assure you will not be disappointed.</p>
+					<img class="image" src="images/eatHappy.png" alt="Eat Happy" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+		
+	<div><br><br></div>
+    <!--footer-->
+	<footer class="section footer-classic context-dark bg-image" style="background: #343A40;">
+		<div class="container">
+			<div class="row row-30">
+				<div class="col-md-4 col-xl-5">
+					<div class="pr-xl-4">
+						<h5>Food For Thought</h5>
+						<p id="footerText">We are a local small business serving organic, made-to-order fresh meals. We are dedicated to assuring that our customers have an easy, convenient experience while grabbing a healthy meal on the go.</p id>
+						<!-- Rights-->
+						<p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>Food For Thought</span><span>. </span><span>All Rights Reserved.</span></p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h5>Contact</h5>
+					<dl class="contact-list">
+						<dt>Address:</dt>
+						<dd>154 7TH ST Garden City, NY 11530</dd>
+					</dl>
+					<dl class="contact-list">
+						<dt>E-mail:</dt>
+						<dd>info@foodforthought.com</dd>
+					</dl>
+					<dl class="contact-list">
+						<dt>Call Us:</dt>
+						<dd>+1 516 555 7654</dd>
+					</dl>
+				</div>
+				<div class="col-md-4 col-xl-3">
+					<h5>Links</h5>
+					<ul class="nav-list">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="testimonials.html">Testimonials</a></li>
+						<li><a href="survey.html">Survey</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!-- Team Project 1
+	Author: Alexa Caridi
+	Date: 1/27/2020
+    Filename: survey.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Survey: Food For Thought</title>
+    <!--Bootstrap CSS link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Assistant|Fugaz+One|Petit+Formal+Script|Rosario|Tajawal&display=swap" rel="stylesheet">
+    <!--Local stylesheet-->
+    <link href="styles.css" rel="stylesheet" />
+    <!--Bootstrap Script links-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--embedded style rules-->
+    <style>
+        header {
+            background-image: url("images/mealPrepHead.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 15px;
+        }
+        div#survey, div#complete {
+            font-family: 'Tajawal', sans-serif;
+            color:white;
+            font-size: 25px;
+            text-align: center;
+        }
+        p#confidential {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 12px;
+        }
+
+        /* Form Layout Styles */
+        div.formRow {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            margin: 7px 0px;
+        } 
+        div.formRow > * {
+            -webkit-flex: 1 1 150px;
+            flex: 1 1 150px;
+        }
+        form#survey {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            max-width: 50%;
+            max-height: fit-content;
+        }
+        form#survey > fieldset {
+            border-radius: 20px;
+            -webkit-flex: 1 1 300px;
+            flex: 1 1 300px;
+            font-size: 0.85em;
+            padding: 10 px;
+            margin: 10px;
+            background-color: #858385;
+            padding: 5px 10px;
+        }
+
+        /* Legend Styles */
+        legend {
+            background-color: white;
+            color: black;
+            padding: 5px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        /* Text Area Styles */
+        textarea {
+            margin-top: 10px;
+            height: 100px;
+            width: 95%;
+        }
+
+        /* Spinner Styles */
+        div.formRow > input#dineSpin {
+            -webkit-flex: 0 0 50px;
+            flex: 0 0 50px;
+            color: white;
+        }
+
+        /* Form Button Styles */
+        div#buttons {
+            text-align: center;
+            width: 100%;
+        }
+        input[type="submit"], input[type="reset"] {
+            font-size: 1.2em;
+            padding: 5px;
+            margin: 15px;
+            border-radius: 15px;
+        }
+
+        /* Validation Styles */
+        input:focus, select:focus, textarea:focus {
+            background-color: #a8a7a8;
+        }
+        input#name:focus:valid,
+        input#zip:focus:valid,
+        input#phone:focus:valid,
+        input#mail:focus:valid {
+            background:#a8a7a8 url(rb_valid.png) bottom right/contain no-repeat;
+        }
+        input#name:focus:invalid,
+        input#zip:focus:invalid,
+        input#phone:focus:invalid,
+        input#mail:focus:invalid {
+            background: #a8a7a8 url(rb_invalid.png) bottom right/contain no-repeat;
+        }
+        label {
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html" style="font-family: 'Fugaz One', cursive;">Food For Thought</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonials.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="survey.html">Survey<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Customer Survey</h1>
+                    <p class="lead mb-0">We Appreciate You!</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Above survey text-->
+    <div id="survey">Your input helps Food For Thought maintain our high-quality take-out service.
+        <p id="confidential">Surveys are private and confidential. Food For Thought will not share your contact information with third parties, ever.</p>
+    </div>
+
+    <!--Start of survey form-->
+    <form id="survey" action="http://www.example.com/redball/survey" method="post">
+        <fieldset id="custInfo">
+            
+            <!--survey heading-->
+            <legend>Tell Us About Your Experience</legend>
+            
+        <div class="formRow">
+            <label for="name">Name*</label>
+            <input name="custName" id="name" type="text" placeholder="First and Last Name" required />
+        </div>	
+        
+        <div class="formRow">	
+            <label for="phone">Phone Number</label>
+            <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+        </div>	
+        
+        <div class="formRow">	
+            <label for="mail">E-mail*</label>
+            <input name="custMail" id="mail" type="email" required />
+        </div>
+        
+        <div class="formRow">
+            <label for="info">Where did you hear about us?<br/></label>
+            <select name="infoSrc" id="info" size="4">
+                <option value="internet">Internet</option>
+                <option value="news">Newspaper</option>
+                <option value="word">Word of Mouth</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="formRow">
+            <label for="dish">What's your favorite dish?</label>
+            <input name="faveDish" id="dish" type="text" list="dishType" />
+            <datalist id="dishType">
+                <option value="Blueberry Protein Pancakes" />
+                <option value="Chocolate Chip Protein Pancakes" />
+                <option value="French Toast" />
+                <option value="Breakdast Burrito" />
+                <option value="Bacon and Eggs" />
+                <option value="Grilled Chicken Caesar Salad" />
+                <option value="Greek Chicken Wrap with Feta" />
+                <option value="Zesty Shrimp Tacos" />
+                <option value="Steak Quesadilla" />
+                <option value="Philly Cheese Steak Sliders" />
+                <option value="Hawaiian Style Salmon" />
+                <option value="Teriyaki Flank Steak" />
+                <option value="Surf N' Turf" />
+                <option value="Baked Chicken Cutlet" />
+                <option value="Grilled Chicken Mac N' Cheese" />
+            </datalist>
+        </div>
+        
+        <div class="formRow">
+            <label for="visit">Date of Visit</label>
+            <input name="visitDate" id="visit" type="date" />
+        </div>
+
+        <div class="formRow">
+            <label>Was your service friendly?</label>
+            <fieldset class="optGroup">
+                <label for="friendlyYes">Yes</label>
+                <input name="sFriend" id="friendlyYes" value="yes" type="radio" />
+                <label for="friendlyNo">No</label>
+                <input name="sFriend" id="friendlyNo" value="no" type="radio" />
+            </fieldset>
+        </div>
+
+        <div class="formRow">
+            <label>Was your order correct?</label>
+            <fieldset class="optGroup">
+                <label for="correctYes">Yes</label>
+                <input name="oCorrect" id="correctYes" value="yes" type="radio" />
+                <label for="correctNo">No</label>
+                <input name="oCorrect" id="correctNo" value="no" type="radio" />
+            </fieldset>
+        </div>
+
+        <div class="formRow" style="color:white;">
+            <label for="rangeBox">Rate the overall service <br/> (0=poor; 10=great)</label>
+            0
+            <input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" />
+            10
+        </div>
+
+        <label for="commBox">Tell us more about your experience!</label>
+        <textarea name="custExp" id="commBox"></textarea>
+            
+        </fieldset>
+        <div id="complete"></div>
+        <div id="buttons">
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit My Survey" />
+        </div>
+    </form>
+    <!--End of survey form-->
+
+    <!--footer-->
+    <footer class="section footer-classic context-dark bg-image" style="background: #343A40;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                    <div class="pr-xl-4">
+                        <h5>Food For Thought</h5>
+                        <p id="footerText">We are a local small business serving organic, made-to-order fresh meals. We are dedicated to assuring that our customers have an easy, convenient experience while grabbing a healthy meal on the go.</p id>
+                        <!-- Rights-->
+                        <p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>Food For Thought</span><span>. </span><span>All Rights Reserved.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <dl class="contact-list">
+                        <dt>Address:</dt>
+                        <dd>154 7TH ST Garden City, NY 11530</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>E-mail:</dt>
+                        <dd>info@foodforthought.com</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>Call Us:</dt>
+                        <dd>+1 516 555 7654</dd>
+                    </dl>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <h5>Links</h5>
+                    <ul class="nav-list">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--JavaScript-->
+    <script>
+        window.onload = setForm;
+
+        function setForm() {
+            document.forms[0].onsubmit = function() {
+                if (this.checkValidity()) document.getElementById("complete").textContent="Thank you! Your survey has been submitted.";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!-- Team Project 1
+	Author: Alexa Caridi
+	Date: 1/27/2020
+  Filename: menu.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Menu: Food For Thought</title>
+    <!--Bootstrap CSS link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Fugaz+One|Petit+Formal+Script|Rosario|Tajawal&display=swap" rel="stylesheet">
+    <!--Local stylesheet-->
+    <link href="styles.css" rel="stylesheet" />
+    <!--Bootstrap Script links-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--embedded style rules-->
+    <style>
+        .text-muted {
+            text-align: left;
+        }
+        .card-img-top {
+            width: 18rem;
+            height: 18rem;
+        }
+        .card-text {
+            color: darkslategrey;
+            text-align: left;
+        }
+        header {
+            background-image: url("images/mealPrepHead.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 15px;
+        }
+        div#price {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+        }
+        h3 {
+            font-family: 'Fugaz One', cursive;
+        }
+        @media screen and (max-width:767px) {
+            h3 {display:none;}
+        }
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="home.html" style="font-family: 'Fugaz One', cursive;">Food For Thought</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="home.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="menu.html">Menu<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="testimonials.html">Testimonials</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="survey.html">Survey</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+    <header>
+        <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Our Menu</h1>
+                    <p class="lead mb-0">Mouthwatering, grab-and-go cuisine</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Div stating the specified prices for menu items-->
+    <div id="price">Breakfast items <em>$7.95</em> &nbsp; &nbsp; &nbsp; Lunch items <em>$8.95</em> &nbsp; &nbsp; &nbsp; Dinner items <em>$9.95</em></div>
+    <!--start of picture menu-->
+    <main role="main">
+        <div class="album py-5 bg-dark">
+            <div class="container">
+            <!--Start of first menu option-->
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Breakfast</h3>
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/blueberryPancakes.jpg" alt="Blueberry Protein Pancakes">
+                        <div class="card-body">
+                            <p class="card-text">Blueberry Protein Pancakes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Breakfast<br>320 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of first menu option-->
+                <!--Start of second menu option-->
+                <div class="col-md-4">
+                    <h3>Lunch</h3>
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/greekWrap.jpg" alt="Greek Wrap">
+                        <div class="card-body">
+                            <p class="card-text">Greek Chicken Wrap with Feta</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Lunch<br>380 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of second menu option-->
+                <!--Start of third menu option-->
+                <div class="col-md-4">
+                    <h3>Dinner</h3>
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/hawaiianSalmon.jpg" alt="Hawaiian Salmon">
+                        <div class="card-body">
+                            <p class="card-text">Hawaiian Style Salmon</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Dinner<br>410 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of third menu option-->
+                <!--Start of fourth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/baconEgg.jpg" alt="Eggs and Bacon">
+                        <div class="card-body">
+                            <p class="card-text">Eggs and Bacon</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Breakfast<br>375 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of fourth menu option-->
+                <!--Start of fifth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/shrimpTacos.jpg" alt="Shrimp Tacos">
+                        <div class="card-body">
+                            <p class="card-text">Zesty Shhrimp Tacos</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Lunch<br>390 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of fifth mennu option-->
+                <!--Start of sixth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/teriyakiFlank.jpg" alt="Teriyaki Flank Steak">
+                        <div class="card-body">
+                            <p class="card-text">Teriyaki Flank Steak</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Dinner<br>455 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of sixth menu option-->
+                <!--Start of seventh menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/breakfastBurrito.jpg" alt="Breakfast Burrito">
+                        <div class="card-body">
+                            <p class="card-text">Breakfast Burrito</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Breakfast<br>360 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of seventh menu option-->
+                <!--Start of eigth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/steakQuesadilla.jpg" alt="Steak Quesadilla">
+                        <div class="card-body">
+                            <p class="card-text">Steak Quesadilla</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Lunch<br>425 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of eigth menu option-->
+                <!--Start of ninth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/surfTurf.jpg" alt="Surf N' Turf">
+                        <div class="card-body">
+                            <p class="card-text">Surf N' Turf</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Dinner<br>420 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of ninth menu option-->
+                <!--Start of tenth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/chocChipPankcakes.jpg" alt="Chocolate Chip Pankcakes">
+                        <div class="card-body">
+                            <p class="card-text">Chocolate Chip Protein Pancakes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Breakfast<br>320 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of tenth menu option-->
+                <!--Start of eleventh menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/steakSliders.jpg" alt="Philly Cheesesteak Sliders">
+                        <div class="card-body">
+                            <p class="card-text">Philly Cheesesteak Sliders</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Lunch<br>415 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of eleventh menu option-->
+                <!--Start of twelveth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/chickenCutlet.jpg" alt="Baked Chicken Cutlet">
+                        <div class="card-body">
+                            <p class="card-text">Baked Chicken Cutlet</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Dinner<br>405 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of twelevth menu option-->
+                <!--Start of thirteenth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/frenchToast.jpg" alt="French Toast">
+                        <div class="card-body">
+                            <p class="card-text">French Toast</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Breakfast<br>380 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of thirteenth menu option-->
+                <!--Start of fourteenth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/caesarSalad.jpg" alt="Grilled Chicken Caesar Salad">
+                        <div class="card-body">
+                            <p class="card-text">Grilled Chicken Caesar Salad</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Lunch<br>390 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of fourteenth menu option-->
+                <!--Start of fifteenth menu option-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="images/chickenMac.jpg" alt="Grilled Chicken Mac N' Cheese">
+                        <div class="card-body">
+                            <p class="card-text">Grilled Chicken Mac N' Cheese</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Dinner<br>425 calories</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of fifteenth menu option-->
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer class="section footer-classic context-dark bg-image" style="background: #343A40;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                    <div class="pr-xl-4">
+                        <h5>Food For Thought</h5>
+                        <p id="footerText">We are a local small business serving organic, made-to-order fresh meals. We are dedicated to assuring that our customers have an easy, convenient experience while grabbing a healthy meal on the go.</p id>
+                        <!-- Rights-->
+                        <p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>Food For Thought</span><span>. </span><span>All Rights Reserved.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <dl class="contact-list">
+                        <dt>Address:</dt>
+                        <dd>154 7TH ST Garden City, NY 11530</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>E-mail:</dt>
+                        <dd>info@foodforthought.com</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>Call Us:</dt>
+                        <dd>+1 516 555 7654</dd>
+                    </dl>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <h5>Links</h5>
+                    <ul class="nav-list">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+ 
